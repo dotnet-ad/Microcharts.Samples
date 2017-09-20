@@ -1,6 +1,6 @@
 # Microcharts samples
 
-All the following applications are just samples to show [Microcharts](https://www.github.com/aloisdeniel/Microcharts) usage in a more concrete .
+All the following applications are just samples to show [Microcharts](https://www.github.com/aloisdeniel/Microcharts) usage. They are **not actually usable** and rely only on fake data.
 
 ## 01. Bikr
 
