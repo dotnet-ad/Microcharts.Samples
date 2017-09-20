@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    Title="Bikr" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Bikr" 
+    x:Class="Bikr.HomePage"
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" >
+    
+    <ListView SeparatorVisibility="None" RowHeight="90" ItemsSource="{Binding Rides}" ItemTapped="Handle_ItemTapped">
+        <ListView.Header>
+            <Grid HeightRequest="280" RowSpacing="10" ColumnSpacing="10" Padding="0" BackgroundColor="{StaticResource PrimaryDark}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.RowSpan="4" Grid.ColumnSpan="6" Opacity="0.08" Source="welcome" Aspect="AspectFill" />
+        
+                <StackLayout Margin="10" HorizontalOptions="Center" Grid.ColumnSpan="6">
+                    <Label FontSize="10" FontAttributes="Bold" HorizontalTextAlignment="Center" Text="LAST RIDES" TextColor="White" />
+                    <BoxView BackgroundColor="White" HeightRequest="1" />
+                </StackLayout>
+
+                <microcharts:ChartView Grid.Row="1" Grid.ColumnSpan="6" x:Name="chartView" BackgroundColor="Transparent" Chart="{Binding LastRidesChart}" />
+
+                <Button Grid.Row="2" Grid.Column="1" TextColor="White" Text="Distance" Command="{Binding SelectModeCommand}">
+                    <Button.CommandParameter>
+                        <local:RideMeasure>Distance</local:RideMeasure>
+                    </Button.CommandParameter>
+                </Button>
+                <BoxView Grid.Row="2" Grid.Column="1" VerticalOptions="End" IsVisible="{Binding Mode, Converter={StaticResource IsConverter}, ConverterParameter=Distance}}" BackgroundColor="White" HeightRequest="3" />
+
+                <Button Grid.Row="2" Grid.Column="2" TextColor="White" Text="Time" Command="{Binding SelectModeCommand}">
+                    <Button.CommandParameter>
+                        <local:RideMeasure>Time</local:RideMeasure>
+                    </Button.CommandParameter>
+                </Button>
+                <BoxView Grid.Row="2" Grid.Column="2" VerticalOptions="End" IsVisible="{Binding Mode, Converter={StaticResource IsConverter}, ConverterParameter=Time}}" BackgroundColor="White" HeightRequest="3" />
+
+                <Button Grid.Row="2" Grid.Column="3" TextColor="White" Text="Calories" Command="{Binding SelectModeCommand}">
+                    <Button.CommandParameter>
+                        <local:RideMeasure>Calories</local:RideMeasure>
+                    </Button.CommandParameter>
+                </Button>
+                <BoxView Grid.Row="2" Grid.Column="3" VerticalOptions="End" IsVisible="{Binding Mode, Converter={StaticResource IsConverter}, ConverterParameter=Calories}}" BackgroundColor="White" HeightRequest="3" />
+
+                <Button Grid.Row="2" Grid.Column="4" TextColor="White" Text="Speed" Command="{Binding SelectModeCommand}">
+                    <Button.CommandParameter>
+                        <local:RideMeasure>Speed</local:RideMeasure>
+                    </Button.CommandParameter>
+                </Button>
+                <BoxView Grid.Row="2" Grid.Column="4" VerticalOptions="End" IsVisible="{Binding Mode, Converter={StaticResource IsConverter}, ConverterParameter=Speed}}" BackgroundColor="White" HeightRequest="3" />
+            </Grid>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid RowSpacing="2" Margin="10" ColumnSpacing="20" Padding="10,10,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Frame Grid.RowSpan="3" WidthRequest="20" HeightRequest="40" BackgroundColor="{StaticResource Primary}" CornerRadius="30" HasShadow="false" />
+                        <Image Grid.RowSpan="3" Source="ic_star_empty" VerticalOptions="Center" HorizontalOptions="Center" />
+
+                        
+                        <Label Grid.Column="1" Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                        <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Start">
+                            <Image WidthRequest="12" Source="ic_location" />
+                            <Label Text="{Binding Location}" Style="{StaticResource ValueLabel}" />
+                            <Image WidthRequest="12" Source="ic_time" />
+                            <Label Text="{Binding TotalTime}" Style="{StaticResource ValueLabel}" />
+                            <Image WidthRequest="12" Source="ic_speed" />
+                            <Label Text="{Binding Speed}" Style="{StaticResource ValueLabel}" />
+                        </StackLayout>
+                         <StackLayout Grid.Column="1"  Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
+                            <Image WidthRequest="12" Source="ic_distance" />
+                            <Label Text="{Binding Distance}" Style="{StaticResource ValueLabel}" />
+                            <Image WidthRequest="12" Source="ic_calories" />
+                            <Label Text="{Binding Calories}" Style="{StaticResource ValueLabel}" />
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+   
+</ContentPage>

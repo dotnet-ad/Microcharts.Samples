@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    Title="{Binding Title}"
+    x:Class="Bikr.RidePage">
+	<ListView SeparatorVisibility="None" RowHeight="60" ItemsSource="{Binding Points}">
+        <ListView.Header>
+        <StackLayout Spacing="0">
+            <StackLayout Padding="10" BackgroundColor="{StaticResource PrimaryDark}">
+                <Label Text="Distance" FontSize="14" FontAttributes="Bold" TextColor="White" />
+                <microcharts:ChartView Margin="-20,0,-20,0" HeightRequest="190" BackgroundColor="Transparent" Chart="{Binding DistanceChart}" />
+            </StackLayout>
+            <StackLayout Padding="10" BackgroundColor="#FFFFFF">
+                <Label Text="Altitude" FontSize="14" FontAttributes="Bold" />
+                <microcharts:ChartView Margin="-20,0,-20,-20" HeightRequest="160" BackgroundColor="Transparent" Chart="{Binding AltitudeChart}" />
+            </StackLayout>
+            <StackLayout Padding="10" BackgroundColor="#FFFFFF">
+                <Label Text="Goals" FontSize="14" FontAttributes="Bold" />
+                <microcharts:ChartView HeightRequest="160" BackgroundColor="Transparent" Chart="{Binding GoalsChart}" />
+            </StackLayout>
+            <StackLayout Padding="10" BackgroundColor="#EEEEEE">
+                <Label Text="Effort" FontSize="14" FontAttributes="Bold" />
+                <microcharts:ChartView HeightRequest="160" BackgroundColor="Transparent" Chart="{Binding EffortChart}" />
+            </StackLayout>
+
+            <Label Text="Points" Margin="10" FontSize="14" FontAttributes="Bold" />
+                    
+        </StackLayout>
+       </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid RowSpacing="2" Margin="10"  Padding="10,10,10,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                         <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
+                            <Image WidthRequest="12" Source="ic_distance" />
+                            <Label Text="{Binding Distance}" Style="{StaticResource ValueLabel}" />
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

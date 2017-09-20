@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application 
+    xmlns:local="clr-namespace:Bikr" 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Bikr.App">
+	<Application.Resources>
+		<ResourceDictionary>
+
+            <local:IsConverter x:Key="IsConverter" />
+            
+            <Color x:Key="Primary">#2C5DF9</Color>
+            <Color x:Key="Dark">#484F64</Color>
+            <Color x:Key="PrimaryDark">#2753DE</Color>
+            
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="ValueLabel" TargetType="Label">
+                <Setter Property="FontSize">12</Setter>
+                <Setter Property="TextColor" Value="{StaticResource Dark}" />
+            </Style>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

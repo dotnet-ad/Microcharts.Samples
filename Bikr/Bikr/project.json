@@ -1,0 +1,12 @@
+﻿{
+  "dependencies": {
+    "Microcharts.Forms": "0.7.1-pre",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+    "Mvvmicro": "0.10.0",
+    "NETStandard.Library": "1.6.0",
+    "Xamarin.Forms": "2.4.0.269-pre2"
+  },
+  "frameworks": {
+    "netstandard1.4": {}
+  }
+}

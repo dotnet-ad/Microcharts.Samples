@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Bikr.WelcomePage">
+	<Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <Image Grid.RowSpan="1" Source="welcome" Aspect="AspectFill" />
+        <BoxView Grid.RowSpan="1" BackgroundColor="{StaticResource Primary}" Opacity="0.8" />
+
+        <StackLayout VerticalOptions="Center" Spacing="0">
+            <Image Source="ic_bike" />
+            <Label HorizontalTextAlignment="Center" FontSize="30" TextColor="White" Text="Bikr" FontAttributes="Bold" />
+        </StackLayout>
+
+        <StackLayout  Grid.Row="1" Padding="30">
+            <Label Margin="0,0,0,10" Text="Welcome," FontAttributes="Bold" HorizontalTextAlignment="Center" FontSize="18" />
+            <Label  HorizontalTextAlignment="Center" TextColor="{StaticResource Dark}" Text="This application is just a sample of the Microcharts library. All data is fake and just here to show you the various charts provided by the library in a real context." />
+            <Button Margin="0,20,0,0" Clicked="Handle_Clicked" BackgroundColor="{StaticResource Primary}" BorderRadius="2" Text="START" VerticalOptions="End" TextColor="White" />
+        </StackLayout>
+
+    </Grid>
+</ContentPage>
