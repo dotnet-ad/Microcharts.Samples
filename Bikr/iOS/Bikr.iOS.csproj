@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.269-pre2\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.269-pre2\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{E17A89C9-F802-4E98-B45E-DF39CE93A4D4}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Bikr.iOS</RootNamespace>
+    <AssemblyName>Bikr.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>18953</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>65353</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="SkiaSharp">
+      <HintPath>..\packages\SkiaSharp.1.59.1\lib\XamariniOS\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.iOS">
+      <HintPath>..\packages\SkiaSharp.Views.1.59.1\lib\XamariniOS\SkiaSharp.Views.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts">
+      <HintPath>..\packages\Microcharts.0.7.1-pre\lib\Xamarin.iOS10\Microcharts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts.iOS">
+      <HintPath>..\packages\Microcharts.0.7.1-pre\lib\Xamarin.iOS10\Microcharts.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.269-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.269-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.269-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.4.0.269-pre2\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp.Views.Forms">
+      <HintPath>..\packages\SkiaSharp.Views.Forms.1.59.1\lib\XamariniOS\SkiaSharp.Views.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts.Forms">
+      <HintPath>..\packages\Microcharts.Forms.0.7.1-pre\lib\netstandard1.4\Microcharts.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvvmicro">
+      <HintPath>..\packages\Mvvmicro.0.10.0\lib\portable-net45+win8+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Mvvmicro.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bikr\Bikr.csproj">
+      <Project>{5B96A7C2-0D99-4342-A105-59155A0CE1D3}</Project>
+      <Name>Bikr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%403x.png" />
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%402x.png" />
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%401x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike.png" />
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location.png" />
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance.png" />
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories.png" />
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed.png" />
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time.png" />
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty%403x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty%402x.png" />
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\welcome.imageset\" />
+    <Folder Include="Assets.xcassets\ic_bike.imageset\" />
+    <Folder Include="Assets.xcassets\ic_location.imageset\" />
+    <Folder Include="Assets.xcassets\ic_distance.imageset\" />
+    <Folder Include="Assets.xcassets\ic_calories.imageset\" />
+    <Folder Include="Assets.xcassets\ic_speed.imageset\" />
+    <Folder Include="Assets.xcassets\ic_time.imageset\" />
+    <Folder Include="Assets.xcassets\ic_star_empty.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.4.0.269-pre2\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.269-pre2\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>
