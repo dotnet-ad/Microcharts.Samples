@@ -7,7 +7,13 @@
     x:Class="Bikr.HomePage"
     xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" >
     
-    <ListView SeparatorVisibility="None" RowHeight="90" ItemsSource="{Binding Rides}" ItemTapped="Handle_ItemTapped">
+    <ListView SeparatorVisibility="None" ItemsSource="{Binding Rides}" ItemTapped="Handle_ItemTapped">
+        <ListView.RowHeight>
+            <OnPlatform x:TypeArguments="x:Int32">
+                <On Platform="Android, iOS" Value="90" />
+                <On Platform="UWP" Value="120" />
+            </OnPlatform>
+        </ListView.RowHeight>
         <ListView.Header>
             <Grid HeightRequest="280" RowSpacing="10" ColumnSpacing="10" Padding="0" BackgroundColor="{StaticResource PrimaryDark}">
                 <Grid.RowDefinitions>
@@ -78,22 +84,64 @@
                         </Grid.ColumnDefinitions>
 
                         <Frame Grid.RowSpan="3" WidthRequest="20" HeightRequest="40" BackgroundColor="{StaticResource Primary}" CornerRadius="30" HasShadow="false" />
-                        <Image Grid.RowSpan="3" Source="ic_star_empty" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Image Grid.RowSpan="3" VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image.Source>
+                                <OnPlatform x:TypeArguments="ImageSource">
+                                    <On Platform="Android, iOS" Value="ic_star_empty" />
+                                    <On Platform="UWP" Value="Assets/ic_star_empty.png" />
+                                </OnPlatform>
+                            </Image.Source>
+                        </Image>
 
                         
                         <Label Grid.Column="1" Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" />
                         <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Start">
-                            <Image WidthRequest="12" Source="ic_location" />
+                            <Image WidthRequest="12">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="Android, iOS" Value="ic_location" />
+                                        <On Platform="UWP" Value="Assets/ic_location.png" />
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
                             <Label Text="{Binding Location}" Style="{StaticResource ValueLabel}" />
-                            <Image WidthRequest="12" Source="ic_time" />
+                            <Image WidthRequest="12">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="Android, iOS" Value="ic_time" />
+                                        <On Platform="UWP" Value="Assets/ic_time.png" />
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
                             <Label Text="{Binding TotalTime}" Style="{StaticResource ValueLabel}" />
-                            <Image WidthRequest="12" Source="ic_speed" />
+                            <Image WidthRequest="12">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="Android, iOS" Value="ic_speed" />
+                                        <On Platform="UWP" Value="Assets/ic_speed.png" />
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
                             <Label Text="{Binding Speed}" Style="{StaticResource ValueLabel}" />
                         </StackLayout>
                          <StackLayout Grid.Column="1"  Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
-                            <Image WidthRequest="12" Source="ic_distance" />
+                            <Image WidthRequest="12">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="Android, iOS" Value="ic_distance" />
+                                        <On Platform="UWP" Value="Assets/ic_distance.png" />
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
                             <Label Text="{Binding Distance}" Style="{StaticResource ValueLabel}" />
-                            <Image WidthRequest="12" Source="ic_calories" />
+                            <Image WidthRequest="12">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="Android, iOS" Value="ic_calories" />
+                                        <On Platform="UWP" Value="Assets/ic_calories.png" />
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
                             <Label Text="{Binding Calories}" Style="{StaticResource ValueLabel}" />
                         </StackLayout>
                     </Grid>

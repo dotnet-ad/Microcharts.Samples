@@ -40,7 +40,14 @@
 
                         <Label Text="{Binding Title}" TextColor="Black" FontSize="18" FontAttributes="Bold" />
                          <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Start">
-                            <Image WidthRequest="12" Source="ic_distance" />
+                            <Image WidthRequest="12">
+                                <Image.Source>
+                                    <OnPlatform x:TypeArguments="ImageSource">
+                                        <On Platform="Android, iOS" Value="ic_distance" />
+                                        <On Platform="UWP" Value="Assets/ic_distance.png" />
+                                    </OnPlatform>
+                                </Image.Source>
+                            </Image>
                             <Label Text="{Binding Distance}" Style="{StaticResource ValueLabel}" />
                         </StackLayout>
                     </Grid>
