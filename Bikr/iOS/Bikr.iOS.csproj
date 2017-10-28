@@ -123,42 +123,114 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\welcome.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%403x.png" />
-    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%402x.png" />
-    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%401x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike.png" />
-    <ImageAsset Include="Assets.xcassets\ic_location.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location.png" />
-    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance.png" />
-    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories.png" />
-    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed.png" />
-    <ImageAsset Include="Assets.xcassets\ic_time.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time.png" />
-    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty%403x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\welcome.imageset\welcome%401x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_bike.imageset\ic_bike.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_location.imageset\ic_location.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_distance.imageset\ic_distance.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_calories.imageset\ic_calories.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_speed.imageset\ic_speed.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_time.imageset\ic_time.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_star_empty.imageset\ic_star_empty.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

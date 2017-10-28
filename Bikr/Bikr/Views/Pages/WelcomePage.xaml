@@ -8,12 +8,26 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        
-        <Image Grid.RowSpan="1" Source="welcome" Aspect="AspectFill" />
+
+        <Image Grid.RowSpan="1" Aspect="AspectFill">
+            <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android, iOS" Value="welcome" />
+                    <On Platform="UWP" Value="Assets/welcome.png" />
+                </OnPlatform>
+            </Image.Source>
+        </Image>
         <BoxView Grid.RowSpan="1" BackgroundColor="{StaticResource Primary}" Opacity="0.8" />
 
         <StackLayout VerticalOptions="Center" Spacing="0">
-            <Image Source="ic_bike" />
+            <Image HorizontalOptions="Center">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <On Platform="Android, iOS" Value="ic_bike" />
+                        <On Platform="UWP" Value="Assets/ic_bike.png" />
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
             <Label HorizontalTextAlignment="Center" FontSize="30" TextColor="White" Text="Bikr" FontAttributes="Bold" />
         </StackLayout>
 
